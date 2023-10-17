@@ -1,10 +1,11 @@
 import CardWidget from "../../cardWidget/CardWidget";
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className={"containerNavbar"}>
       <h4>Logo</h4>
-      <ul>
+      <ul className={"categories"}>
         <li>Deportivo</li>
         <li>Clasico</li>
         <li>Camioneta</li>
