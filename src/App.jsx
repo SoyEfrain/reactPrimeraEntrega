@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Home />
       <Login />
-      <ItemListContainer nombre={nombre} />
+      <ItemListContainer />
       <CounterContainer nombre={nombre} />
     </div>
   );

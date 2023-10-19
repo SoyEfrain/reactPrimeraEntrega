@@ -3,7 +3,7 @@ import CounterPresentacional from "./CounterPresentacional";
 
 const CounterContainer = ({ stock }) => {
   const [contador, setContador] = useState(5);
-  const [nombre, setNombre] = useState("Saimon");
+  const [nombre, setNombre] = useState(1);
 
   const sumar = () => {
     if (contador < stock) {
