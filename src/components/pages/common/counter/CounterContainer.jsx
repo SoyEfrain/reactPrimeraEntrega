@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import CounterPresentacional from "./CounterPresentacional";
 
 const CounterContainer = ({ stock }) => {
-  const [contador, setContador] = useState(5);
-  const [nombre, setNombre] = useState(1);
+  const [contador, setContador] = useState(1);
 
   const sumar = () => {
     if (contador < stock) {
@@ -19,20 +18,8 @@ const CounterContainer = ({ stock }) => {
     }
   };
 
-  useEffect(() => {
-    console.log("Se realizo un cambio");
-  }, [nombre, contador]);
-
-  console.log("actualizacion");
-
   return (
-    <CounterPresentacional
-      sumar={sumar}
-      restar={restar}
-      contador={contador}
-      nombre={nombre}
-      setNombre={setNombre}
-    />
+    <CounterPresentacional sumar={sumar} restar={restar} contador={contador} />
   );
 };
 
