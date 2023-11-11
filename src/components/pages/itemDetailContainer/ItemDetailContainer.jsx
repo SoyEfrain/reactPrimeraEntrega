@@ -1,11 +1,34 @@
 import { useEffect, useState } from "react";
+import { products } from "../../../productsMock";
+import { ItemDetail } from "./ItemDetail";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-  let id = 2;
+  const [productSelected, setProductSelected] = useState({});
 
-  useEffect(() => {}, []);
+  const { id } = useParams();
 
-  return <div>ItemDetailContainer</div>;
+  useEffect(() => {
+    let producto = products.find((product) => product.id === +id);
+
+    const getProduct = new Promise((resolve, reject) => {
+      resolve(producto);
+    });
+
+    getProduct
+      .then((res) => setProductSelected(res))
+      .catch((err) => console.log(err));
+  }, [id]);
+
+  const onAdd = (cantidad) => {
+    let obj = {
+      ...productSelected,
+      quantity: cantidad,
+    };
+    console.log("este es el producto que se agrega", obj);
+  };
+
+  return <ItemDetail productSelected={productSelected} onAdd={onAdd} />;
 };
 
 export default ItemDetailContainer;
