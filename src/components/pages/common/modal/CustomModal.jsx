@@ -1,4 +1,4 @@
-import ItemListContainer from "../../itemListContainer/itemListContainer";
+import ItemListContainer from "../../itemListContainer/ItemListContainer";
 import CounterContainer from "../../common/counter/CounterContainer";
 
 const CustomModal = ({ children }) => {

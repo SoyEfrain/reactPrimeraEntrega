@@ -7,7 +7,7 @@ export const Navbar = () => {
     <>
       <div className={"containerNavbar"}>
         <Link to="/">
-          <h4>Comision 47225</h4>
+          <h4>Entrega</h4>
         </Link>
         <ul className="categories">
           <Link to="/">

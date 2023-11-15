@@ -8,6 +8,8 @@ const ItemDetailContainer = () => {
 
   const { id } = useParams();
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     let producto = products.find((product) => product.id === +id);
 
@@ -26,6 +28,8 @@ const ItemDetailContainer = () => {
       quantity: cantidad,
     };
     console.log("este es el producto que se agrega", obj);
+
+    navigate("/cart");
   };
 
   return <ItemDetail productSelected={productSelected} onAdd={onAdd} />;
