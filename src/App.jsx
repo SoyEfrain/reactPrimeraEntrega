@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import AppRouter from "./router/AppRouter";
+import CartContextComponent from "./context/CartContext";
 
 function App() {
   let nombre = "Angelica";
   return (
-    <div>
-      <BrowserRouter>
+    <BrowserRouter>
+      <CartContextComponent>
         <AppRouter />
-      </BrowserRouter>
-    </div>
+      </CartContextComponent>
+    </BrowserRouter>
   );
 }
 
